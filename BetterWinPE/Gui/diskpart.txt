@@ -1,0 +1,10 @@
+select disk 2
+clean
+create partition primary size=30048
+format fs=FAT32 quick label="WinPE"
+assign letter=F
+active
+
+create partition primary
+format fs=NTFS quick label="Offline"
+assign letter=O
